@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaceRegistration.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <BoxView>
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="1,1" EndPoint="0,2" >
+                    <GradientStop Color="#564581"
+                          Offset="0.1" />
+                    <GradientStop Color="#564581"
+                          Offset="0.1" />
+                    <GradientStop Color="#282a48"
+                          Offset="0.2" />
+                    <GradientStop Color="#282a48"
+                          Offset="0.2" />
+                    <GradientStop Color="#4f2e4f"
+                          Offset="0.1" />
+                    <GradientStop Color="#4f2e4f"
+                          Offset="0.1" />
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+
+        <Image x:Name="image1" VerticalOptions="Start" HorizontalOptions="Center" TranslationY="50" Margin="93, 0"/>
+        <ScrollView VerticalOptions="FillAndExpand">
+
+            <StackLayout TranslationY="150">
+                <Label Text="Enter your name and the digital key" TextColor="White" FontSize="16" HorizontalOptions="Center" />
+                <Label Text="provided by your reselle" TextColor="White" FontSize="16" HorizontalOptions="Center" />
+                <Label Margin="0, 30, 0, 0" HorizontalOptions="Center" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Scan QR code to Start" FontAttributes="Bold" FontSize="18" TextColor="White" TextDecorations="Underline"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <StackLayout Margin="20, 20, 20, 0">
+                    <Label  Text="Full Name" FontSize="18" TextColor="White" />
+                    <Frame BorderColor="#46558c" BackgroundColor="#252443" CornerRadius="6" Padding="10, 0" HeightRequest = "48">
+                        <Entry x:Name="NameEntry" Placeholder = "John Doe" PlaceholderColor = "DimGray"
+               Keyboard = "Text" TextColor = "White" />
+                    </Frame>
+
+                    <Label  Text="Digital Key" FontSize="18" TextColor="White" Margin="0, 20, 0, 0" />
+                    <Frame BorderColor="#46558c" BackgroundColor="#252443" CornerRadius="6" Padding="10, 0" HeightRequest = "48">
+                        <Entry x:Name="IdEntry" Placeholder = "Example: 1KLS43SDF43DSK23" PlaceholderColor = "DimGray" 
+               Keyboard = "Text" TextColor = "White">
+                        </Entry>
+                    </Frame>
+
+                    <Frame  BackgroundColor="#10000000" CornerRadius="6" Margin="0, 40, 0, 0" Padding="3, 0, 3, 5">
+                        <Button Text="Active Application" TextTransform="None" Background="#222a44" TextColor="White" Font="18" 
+                            CornerRadius="6" HeightRequest="48" Clicked="Button_Clicked">
+                        </Button>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

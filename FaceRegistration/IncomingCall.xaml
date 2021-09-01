@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaceRegistration.IncomingCall"
+              NavigationPage.HasNavigationBar="False">
+
+    <Grid >
+        
+        <StackLayout >
+            <Image x:Name="camera"  VerticalOptions="FillAndExpand" ></Image>
+        </StackLayout>
+        <StackLayout VerticalOptions="Center">
+            <ImageButton x:Name="answer" HeightRequest="110" BackgroundColor="Transparent" Clicked="Button_Answer"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" >
+            <Frame BackgroundColor="#30000000" Padding="0, 6, 0, 0" >
+                <BoxView HeightRequest="268" CornerRadius="27, 27, 0, 0">
+                    <BoxView.Background>
+                        <LinearGradientBrush StartPoint="1,1" EndPoint="0,2" >
+                            <GradientStop Color="#564581"
+                          Offset="0.1" />
+                            <GradientStop Color="#564581"
+                          Offset="0.1" />
+                            <GradientStop Color="#282a48"
+                          Offset="0.2" />
+                            <GradientStop Color="#282a48"
+                          Offset="0.2" />
+                            <GradientStop Color="#4f2e4f"
+                          Offset="0.1" />
+                            <GradientStop Color="#4f2e4f"
+                          Offset="0.1" />
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                </BoxView>
+            </Frame>
+        </StackLayout>
+
+        <StackLayout TranslationY="450" HorizontalOptions="Center">
+            <Label TextColor="White" FontSize="32" HorizontalOptions="Center" >
+                Visitor calling
+            </Label>
+            <StackLayout Orientation="Horizontal" Margin="0, 20, 0, 0">
+                <ImageButton x:Name="accept" WidthRequest="90" HeightRequest="90" BackgroundColor="Transparent" TranslationX="50" Clicked="Button_Accept"  />
+                <Image x:Name="image" WidthRequest="268" TranslationX="-20" BackgroundColor="Transparent" />
+                <ImageButton x:Name="decline" WidthRequest="90" HeightRequest="90" BackgroundColor="Transparent"  TranslationX="-100" Clicked="Button_Decline" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Spacing="180" Margin="70, 0, 0, 0">
+                <Label TextColor="White" FontSize="16">Open</Label>
+                <Label TextColor="White" FontSize="16">Decline</Label>
+            </StackLayout>
+        </StackLayout>
+        
+    </Grid>
+</ContentPage>

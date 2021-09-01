@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="assets\normal_u.png" />
+    <None Remove="assets\normal_u32.png" />
+    <None Remove="assets\normal_u36.png" />
+    <None Remove="assets\normal_u394.png" />
+    <None Remove="assets\normal_u400.png" />
+    <None Remove="assets\normal_u409.png" />
+    <None Remove="assets\normal_u411.png" />
+    <None Remove="assets\normal_u414.png" />
+    <None Remove="assets\normal_u80.png" />
+    <None Remove="assets\u258.png" />
+    <None Remove="assets\u259.png" />
+    <None Remove="assets\u260.png" />
+    <None Remove="assets\u261.png" />
+    <None Remove="assets\u262.png" />
+    <None Remove="assets\u266.png" />
+    <None Remove="assets\u73.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="assets\normal_u.png" />
+    <EmbeddedResource Include="assets\normal_u32.png" />
+    <EmbeddedResource Include="assets\normal_u36.png" />
+    <EmbeddedResource Include="assets\normal_u394.png" />
+    <EmbeddedResource Include="assets\normal_u400.png" />
+    <EmbeddedResource Include="assets\normal_u409.png" />
+    <EmbeddedResource Include="assets\normal_u411.png" />
+    <EmbeddedResource Include="assets\normal_u414.png" />
+    <EmbeddedResource Include="assets\normal_u80.png" />
+    <EmbeddedResource Include="assets\u258.png" />
+    <EmbeddedResource Include="assets\u259.png" />
+    <EmbeddedResource Include="assets\u260.png" />
+    <EmbeddedResource Include="assets\u261.png" />
+    <EmbeddedResource Include="assets\u262.png" />
+    <EmbeddedResource Include="assets\u266.png" />
+    <EmbeddedResource Include="assets\u73.png" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <EmbeddedResource Update="IncomingCall.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Page1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Page2.xaml">
+      <Generator></Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
