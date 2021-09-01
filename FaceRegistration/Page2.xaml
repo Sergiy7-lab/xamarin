@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaceRegistration.Page2"
+              NavigationPage.HasNavigationBar="False">
+    
+    <Grid>
+
+        <BoxView>
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="1,1" EndPoint="0,2" >
+                    <GradientStop Color="#564581"
+                          Offset="0.1" />
+                    <GradientStop Color="#564581"
+                          Offset="0.1" />
+                    <GradientStop Color="#282a48"
+                          Offset="0.2" />
+                    <GradientStop Color="#282a48"
+                          Offset="0.2" />
+                    <GradientStop Color="#4f2e4f"
+                          Offset="0.1" />
+                    <GradientStop Color="#4f2e4f"
+                          Offset="0.1" />
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+
+        <StackLayout>
+
+            <StackLayout>
+                <Frame BackgroundColor="#40000000" CornerRadius="21" HeightRequest="100">
+                    <StackLayout >
+                        <Label HorizontalTextAlignment="Center" TextColor="White" FontSize="16" Padding="20">Тирион Ланнистер</Label>
+                        <Label HorizontalTextAlignment="Center" TextColor="#7a8692" FontSize="16" >ЖК Радуга Дом 14/7 кв. 23</Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0, 40, 0, 0">
+                <Label Text="Virtual keys" TextColor="White" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+            </StackLayout>
+
+            <StackLayout  Margin="40, 40, 40, 0" Spacing="40">
+                <Frame BackgroundColor="#40000000" CornerRadius="10" Padding="15" >
+                    <StackLayout Orientation="Horizontal">
+                        <Image x:Name="territory" HeightRequest="40" Margin="20, 0, 20, 0"/>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+
+                            <Label x:Name="territory_text" TextColor=" #7a8692" FontSize="14">Open</Label>
+                            <Label TextColor="White" FontSize="16">
+                                Entrance on the territory
+                            </Label>
+                        </StackLayout>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Territory_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#40000000" CornerRadius="10" Padding="15">
+                    <StackLayout Orientation="Horizontal" >
+                        <Image x:Name="house" HeightRequest="40" Margin="20, 0, 20, 0" />
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+
+                            <Label x:Name="house_text" TextColor=" #7a8692" FontSize="14">Open</Label>
+                            <Label TextColor="White" FontSize="16">
+                                Entrance door
+                            </Label>
+                        </StackLayout>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="House_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">
+                <Frame BackgroundColor="#40000000" CornerRadius="21" WidthRequest="10000">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="70">
+                        <Frame BackgroundColor="#60000000"  CornerRadius="6" Padding="15" WidthRequest="25">
+                            <ImageButton x:Name="phone" HeightRequest="20" BackgroundColor="Transparent" Clicked="phone_Clicked" />
+                        </Frame>
+                        <Frame BackgroundColor="#60000000"   CornerRadius="6" Padding="15" WidthRequest="25" >
+                            <ImageButton x:Name="home" HeightRequest="20" BackgroundColor="Transparent" Clicked="home_Clicked"/>
+                        </Frame>
+                        <Frame  BackgroundColor="#60000000"  CornerRadius="6" Padding="15" WidthRequest="25">
+                            <ImageButton x:Name="settings" HeightRequest="20" BackgroundColor="Transparent" Clicked="settings_Clicked"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+        </StackLayout>
+    </Grid>
+</ContentPage>
